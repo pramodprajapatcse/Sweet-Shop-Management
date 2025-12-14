@@ -71,15 +71,16 @@ const SweetCard = ({ sweet, isAdmin, refresh }: any) => {
             <div className="col-5 text-end">
               {sweet.image ? (
                 <img
-                  src={`http://localhost:5000${sweet.image}`}
-                  alt={sweet.name}
-                  className="img-fluid rounded"
-                  style={{
-                    height: 120,
-                    width: '100%',
-                    objectFit: 'cover'
-                  }}
-                />
+  src={sweet.image}
+  alt={sweet.name}
+  className="img-fluid rounded"
+  style={{
+    height: 120,
+    width: '100%',
+    objectFit: 'cover'
+  }}
+/>
+
               ) : (
                 <div
                   className="bg-light rounded d-flex align-items-center justify-content-center"
