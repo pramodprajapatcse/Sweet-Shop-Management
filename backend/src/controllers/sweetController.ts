@@ -40,7 +40,9 @@ export const createSweet = async (req: Request, res: Response) => {
       category,
       price,
       quantity,
-      image: req.file ? `/uploads/${req.file.filename}` : undefined
+      image: req.file
+        ? `${process.env.BASE_URL}/uploads/${req.file.filename}`
+        : undefined
     });
 
     await sweet.save();
